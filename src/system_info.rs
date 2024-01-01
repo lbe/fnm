@@ -8,6 +8,11 @@ pub fn platform_name() -> &'static str {
     "linux"
 }
 
+#[cfg(target_os = "freebsd")]
+pub fn platform_name() -> &'static str {
+    "freebsd"
+}
+
 #[cfg(all(
     target_pointer_width = "32",
     any(target_arch = "arm", target_arch = "aarch64")
